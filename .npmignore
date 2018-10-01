@@ -1,0 +1,4 @@
+.projectile
+jest.config.js
+*.tgz
+/docs/

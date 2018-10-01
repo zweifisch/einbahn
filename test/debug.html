@@ -1,0 +1,23 @@
+<html>
+<meta charset='utf8'/>
+<script>
+let es
+
+function connect(){
+  es = new EventSource('/')
+  es.addEventListener('connected', ({ data }) => {
+    console.log(data)
+  })
+  es.onopen = () => console.log('connected')
+  es.onerror = reconnect
+}
+function reconnect({target}) {
+  console.log(target.readyState)
+  if(target.readyState === EventSource.CLOSED) {
+    console.log('hard reconnecting')
+    setTimeout(connect, 3000)
+  }
+}
+connect()
+</script>
+</html>
