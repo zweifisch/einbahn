@@ -1,4 +1,9 @@
 .projectile
-jest.config.js
 *.tgz
 /docs/
+/src/
+/test/
+/examples/
+.travis.yml
+*.conf.js
+*.json

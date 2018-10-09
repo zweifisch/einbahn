@@ -11,6 +11,7 @@
     "build": "tsc",
     "format": "gts fix src/*.ts test/*.ts",
     "doc": "typedoc --out docs --mode file --excludePrivate --exclude '**/test/server.ts' --theme minimal --readme none && touch docs/.nojekyll",
+    "prepulish": "npm run build",
     "release": "standard-version"
   },
   "keywords": [
